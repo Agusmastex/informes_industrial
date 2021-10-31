@@ -1,0 +1,289 @@
+\documentclass[a4paper,12pt]{article} % This defines the style of your paper
+\usepackage{graphicx} 
+% The default setting of LaTeX is to indent new paragraphs. This is useful for articles. But not really nice for homework problem sets. The following command sets the indent to 0.
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+% Package to place figures where you want them.
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{nccmath}
+\usepackage{mathrsfs}
+\usepackage{amssymb} %simbolos matematicos
+\usepackage{ulem} 
+\usepackage{cancel} %tachar con flecha
+\usepackage{color,soul} %resaltador
+\usepackage{lipsum}
+% The fancyhdr package let's us create nice headers.
+\usepackage{fancyhdr}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=nty
+]{biblatex}
+\addbibresource{sample.bib} %Imports bibliography file
+\title{Bibliography management: \texttt{biblatex} package}
+
+% 3. Header (and Footer)
+\pagestyle{fancy} % With this command we can customize the header style.
+\fancyhf{} % This makes sure we do not have other information in our header or footer.
+\lhead{\footnotesize FCQ-UNA}
+\rhead{\footnotesize Laboratorio de Analisis Industrial - Practica N°1 } 
+\cfoot{\footnotesize \thepage} 
+
+% 4. Your document
+\begin{document}
+
+% Title section of the document
+\thispagestyle{empty} 
+\begin{tabular}{p{15.5cm}}
+{\large \bf Universidad Nacional de Asunción} \\
+Facultad de Ciencias Químicas \\ 
+Ingeniería Química - Laboratorio de Análisis Industrial \\
+\hline
+\end{tabular} 
+
+\vspace*{0.3cm} % Vertical space between the line and title.
+
+\begin{center} 
+    {\Large \bf Practica N°1  \\ \vspace{3mm} Análisis de agua}
+    \vspace{5mm}
+    \begin{figure}[H] 
+        \centering
+        \includegraphics[scale=0.2]{LOGO-UNA.png}
+    \end{figure}
+\end{center}  
+
+\vspace{15mm}
+
+\begin{itemize}
+    \item \textbf{Grupo 11: Integrantes}
+    \begin{itemize}
+        \item{\bf Mateo Augusto Acevedo Onieva}
+        \item{\bf Dylan Sebastián Galeano Monteggia}
+        \item{\bf José Manuel Karjallo Zárate}
+    \end{itemize}
+\end{itemize}
+
+
+
+\newpage
+
+\section{Determinación de acidez}
+
+\subsection{Fundamento} 
+Este método está basado en la medición de la acidez en el agua por medio de una valoración de la muestra empleando como disolución valorante un álcali de concentración perfectamente conocida.         
+
+\subsection{Reactivos} 
+\begin{itemize}
+\item{Solución de hidróxido de sodio de 0,1 N (PM= 39,997 g/mol)}
+\item{Solución de ácido sulfúrico 0,02 N (PM=98,079 g/mol, d=1,84 y C= 98\%)}
+\end{itemize}
+
+\subsection{Datos experimentales}
+La determinación de acidez de agua no se logró realizar por falta de tiempo en el laboratorio. 
+
+
+
+\newpage
+
+\section{Determinación de alcalinidad}
+
+\subsection{Fundamento} 
+Este método está basado en la medición de la alcalinidad en el agua por medio de una valoración de la muestra empleando como disolución valorante un ácido de concentración perfectamente conocida.            
+
+\subsection{Reactivos} 
+\begin{itemize}
+    \item{Solución de ácido clorhídrico 0,1 N (PM = 36,461 g/mol, d = 1,19 y C=36,5\%)} 
+    \item{Solución indicadora de fenolftaleína (100 mL)}
+    \item{Solución indicadora de anaranjado de metilo (100 mL)}
+\end{itemize}
+
+\subsection{Datos experimentales}
+\textbf{Blanco} \\
+100ml agua destilada + 3 gotas de fenolftaleina \\
+No presenta alcalinidad \\
+Blanco + 3 gotas de naranja de metilo \\
+m = 0,5 ml de HCl consumidos \\
+
+\textbf{Muestra} \\
+100 ml en probeta + 3 gotas de fenolftaleina \\
+No presenta cambio de color \\
+100ml en probeta + 3 gotas de naranja de metilo \\ 
+m = 0,6 ml de HCl consumidos \\
+
+\subsection{Cálculos y resultados} 
+Alcalinidad = mL HCl 0,1 N x 61 = mg $(HCO_3)^{1-}$/L   \\
+Alcalinidad = 0,6 * 61 = 36,6 mg $(HCO_3)^{1-}$/L  
+
+\subsection{Discusión} 
+Se realizo la determinación de alcalinidad en la muestra de agua dando un resultado de 36,6 mg $(HCO_3)^{1-}$/L, siendo el rango de la alcalinidad en aguas domésticas, es decir, el agua potable, oscila en valores de 50 a 200 mg/L CaCO3 según el articulo Pérez-López, Esteban. “Control de calidad en aguas para consumo humano en la región occidental de Costa Rica.” lo que difiere un poco del resultado alcanzado en la practica, esta diferencia puede deberse a interferencias como jabones, materias oleosas y solidos en suspensión que pueden recubrir el electrodo y causar una respuesta retardada en la lectura.
+
+\section{Determinación de dureza}
+
+\subsection{Fundamento} 
+El método se basa en la formación de complejos por la sal disódica del ácido etilendiaminotetracético con los iones calcio y magnesio. El método consiste en una  valoración  empleando  un indicador visual de punto final, el negro de eriocromo T, que 
+es de color rojo en la presencia de calcio y magnesio y vira a azul cuando estos se encuentran acomplejados o ausentes. El complejo del EDTA con el calcio y el magnesio es más fuerte que el que estos iones forman con el negro de eriocromo T, 
+de manera que la competencia por los iones se desplaza hacia la formación de los complejos con EDTA desapareciendo el color rojo de la disolución y tornándose azul.         
+
+\subsection{Reactivos} 
+\begin{itemize}
+    \item{Solución de EDTA 0,01 M (PM = 372,240 g/mol) } 
+    \item{Solución amortiguadora de pH 10}
+    \item{Solución indicadora de NET (100 mL)} 
+\end{itemize}
+
+\subsection{Datos experimentales} 
+La determinación de dureza del agua no se logró realizar por falta de tiempo en el laboratorio. 
+
+
+
+\newpage
+
+\section{Determinación de cloruros}
+
+\subsection{Fundamento}
+La determinación de cloruros por este método se basa en una valoración con nitrato de plata utilizando como indicador cromato de potasio. La plata reacciona con los cloruros para formar un precipitado de cloruro de plata de color blanco. En las inmediaciones del punto de equivalencia al agotarse el ión cloruro, empieza la precipitación del cromato. La formación de cromato de plata puede identificarse por el cambio de color de la disolución a anaranjado-rojizo así como en la forma del
+
+\subsection{Reactivos} 
+\begin{itemize}
+    \item{Solución patrón de nitrato de plata 0,1 N (PM = 169,873 g/mol)} 
+\end{itemize}
+
+\subsection{Datos experimentales} 
+$V_m$ = 50 ml \\
+$ph_0$ = 5,982  \\
+$ph_1$ = 8,557 a 22,2 C  \\
+$V_a$ = 50 ml agua destilada \\
+Se agregan 3 gotas de K2CrO4 concentración= 0,0025 - 0,005M \\
+color amarillo \\
+
+Bureta -- nitrato de plata AgNO3 C=0,086N \\
+1) 5,4 - 5,1 = 0,3 \\
+Cambio \\
+Color rojo pardo \\
+
+\subsection{Cálculos y resultados}
+
+\subsection{Discusión}
+
+
+
+\newpage
+
+\section{Determinación de oxigeno disuelto}
+
+\subsection{Fundamento}
+En el método de la azida de sodio se adiciona una disolución de manganeso divalente y una disolución alcalina yoduro-azida de sodio a una muestra de agua contenida en un frasco de vidrio que debe permanecer cerrado. El oxígeno disuelto, OD, oxida al hidróxido de manganeso disuelto, en cantidad equivalente, para producir un precipitado de manganeso con valencia más alta. Se acidifica la muestra y los iones yoduro reducen al manganeso a su estado divalente produciéndose yodo equivalente al contenido de OD original. El yodo se titula con una disolución normalizada de tiosulfato de sodio. El punto final de la valoración se detecta visualmente con un indicador de almidón.      
+
+\subsection{Reactivos} 
+\begin{itemize}
+    \item{Solución de sulfato manganoso} 
+    \item{Solución de álcali-ioduro: }
+    \item{Solución indicadora de almidón}
+    \item{Solución de tiosulfato de sodio 0,0250M (PM = 248,186 g/mol) }
+    \item{Solución patrón de dicromato de potasio 0,1000 N (PM = 294,185 g/mol)}
+\end{itemize}
+
+\subsection{Datos experimentales} 
+La determinación de oxigeno disuelto no se logró realizar por falta de tiempo y/o reactivos. 
+
+
+
+\newpage
+
+\section{Determinación de materia orgánica}
+
+\subsection{Fundamento}
+Se utiliza el método de Kubel, basado en la oxidación de la materia orgánica por el oxígeno activo liberado por el KMnO4 en medio acido fuerte. La reacción de oxidación ocurre gracias al oxigeno liberado por el permanganato 
+
+\subsection{Reactivos} 
+\begin{itemize}
+    \item{Solución de permanganato de potasio = 0,10 N; valorada (PM = 158,034g/mol)} 
+    \item{Solución de ácido oxálico = 0,1N}  
+    \item{Solución de ácido sulfúrico 1:3 (100,0 mL)}  
+\end{itemize}
+
+\subsection{Datos experimentales} 
+La determinación de materia orgánica no se logró realizar por falta de tiempo y/o reactivos. 
+
+
+
+\newpage
+
+\section{Determinación de nitritos} 
+
+\subsection{Fundamento} 
+El ensayo se fundamenta en la diazotación del ácido sulfanílico por ácido nitroso, seguida por la copulación con $\alpha$-naftilamina para formar un colorante azico-rojo. Los iones Fe3+ se deben enmascarar con ácido tartárico. La solución a ensayar debe estar muy diluida; de otra forma la reacción no va más allá que la etapa de diazotación.
+
+\subsection{Reactivos} 
+\begin{itemize}
+    \item{Reactivo de ácido sulfanílico} 
+    \item{Reactivo de $\alpha$-naftilamina}
+\end{itemize}
+
+\subsection{Datos experimentales}
+1 gota de muestra \\
+1 gota de ac. sulfanilico \\
+Color en el estado final : incoloro \\
+Resultado : negativo \\
+
+\subsection{Discusión}
+Se logro observar la solución con un estado final incoloro, indicando un resultado negativo a la presencia de nitratos en la muestra agua tomada lo que coincide con los parámetros de calidad de agua según la norma NMX-AA-099-SCFI-2006 ANALISIS DE AGUA - DETERMINACION DE NITROGENO DE NITRITOS EN AGUAS NATURALES Y RESIDUALES
+
+
+
+\newpage
+
+\section{Determinación de nitratos}
+
+\subsection{Fundamento} 
+El ensayo se fundamenta en la formación de un complejo entre la brucina y el nitrato NO31-; en el medio ácido; originando una coloración rojo intensa que enseguida pasa a anaranjado y se estabiliza en el amarillo. Esta reacción no ocurre con NO21-. 
+
+\subsection{Reactivos} 
+\begin{itemize}
+    \item{Solución de fehling} 
+    \item{Solución alcalina de tartrato}
+    \item{Solución de azúcar invertido en agua}
+\end{itemize}
+
+\subsection{Datos experimentales} 
+2ml de muestra + 5 ml H2SO4 \\
+Brucina = 0,0685 g  \\
+Color : amarillo \\
+Resultado : negativo \\
+
+\subsection{Discusión} 
+Se logro observar el cambio de color de la solución preparada a amarillo, indicando un resultado negativo a la presencia de nitratos en la muestra de agua tomada lo que coincide con los parámetros de calidad de agua potable según la norma     NMX-AA-079-SCFI-2001 ANALISIS DE AGUAS - DETERMINACION DE NITRATOS EN AGUAS NATURALES, POTABLES, RESIDUALES Y RESIDUALES TRATADAS
+
+
+
+\newpage
+
+\section{Conclusión}
+En esta practica se pudo hallar la alcalinidad de la muestra en mg $(HCO_3)^{1-}$/L, además se logro realizar la determinación cualitativa de nitritos y nitratos de la muestra, ambos resultando negativos conforme a los parámetros esperados según las normas y bibliografías consultadas. No se pudo hacer las determinación de oxigeno disuelto, determinación de dureza, determinación de acidez, determinación de materia orgánica debido a inconvenientes o falta de tiempo así como falta de reactivos para las practicas faltantes.
+
+
+
+\newpage
+
+\section {Bibliografías}
+\begin{itemize}
+    \item {NMX-AA-012-1980 ANALISIS DE AGUA - DETERMINACION DE OXIGENO DISUELTO EN AGUAS NATURALES, RESIDUALES Y RESIDUALES TRATADAS}
+    \item {NMX-AA-072-SCFI-2001 ANALISIS DE AGUA - DETERMINACION DE DUREZA TOTAL EN AGUAS RESIDUALES Y RESIDUALES TRATADAS}
+    \item {NMX-AA-099-SCFI-2006 ANALISIS DE AGUA - DETERMINACION DE NITROGENO DE NITRITOS EN AGUAS NATURALES Y RESIDUALES}   \item{NMX-AA-028-2001 ANALISIS DE AGUA - DETERMINACION DE DEMANDA BIOQUIMICA DE OXIGENO EN AGUAS NATURALES, RESIDUALES Y RESIDUALES TRATADAS}
+    \item{NMX-AA-079-SCFI-2001 ANALISIS DE AGUAS - DETERMINACION DE NITRATOS EN AGUAS NATURALES, POTABLES, RESIDUALES Y RESIDUALES TRATADAS}
+    \item{NMX-AA-073-SCFI-2001 ANALISIS DE AGUA - DETERMINACION DE CLORUROS TOTALES EN AGUAS NATURALES, RESIDUALES Y RESIDUALES TRATADAS}
+    \item{NMX-AA-036-SCFI-2001 ANALISIS DE AGUA - DETERMINACION DE ACIDEZ Y ALCALINIDAD EN AGUAS NATURALES, RESIDUALES Y RESIDUALES TRATADAALES TRATADAS}
+    \item{Pérez-López, Esteban. “Control de calidad en aguas para consumo humano en la región occidental de Costa Rica.” Revista Tecnología en Marcha, vol. 29, no. 3, Sept. 2016, pp. 3–14. SciELO, https://doi.org/10.18845/tm.v29i3.2884.}
+\end{itemize}
+
+
+
+\printbibliography[
+heading=bibintoc,
+title={Bibliografías}
+]
+
+
+
+\end{document}
