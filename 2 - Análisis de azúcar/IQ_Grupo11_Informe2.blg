@@ -1,9 +1,0 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[1] Config.pm:314> INFO - Logfile is 'IQ_Grupo11_Informe2.blg'
-[525] biber-MSWIN32:340> INFO - === 
-[682] Biber.pm:415> INFO - Reading 'IQ_Grupo11_Informe2.bcf'
-[1269] Biber.pm:952> INFO - Found 0 citekeys in bib section 0
-[1316] Utils.pm:395> WARN - The file 'IQ_Grupo11_Informe2.bcf' does not contain any citations!
-[1352] bbl.pm:654> INFO - Writing 'IQ_Grupo11_Informe2.bbl' with encoding 'UTF-8'
-[1352] bbl.pm:757> INFO - Output to IQ_Grupo11_Informe2.bbl
-[1354] Biber.pm:128> INFO - WARNINGS: 1
