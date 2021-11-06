@@ -1,0 +1,299 @@
+\documentclass[a4paper,12pt]{article} % This defines the style of your paper
+\usepackage{graphicx} 
+% The default setting of LaTeX is to indent new paragraphs. This is useful for articles. But not really nice for homework problem sets. The following command sets the indent to 0.
+
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+% \setlength{\parskip}{\baselineskip}
+
+% Package to place figures where you want them.
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{nccmath}
+\usepackage{mathrsfs}
+\usepackage{amssymb} %simbolos matematicos
+\usepackage{ulem} 
+\usepackage{cancel} %tachar con flecha
+\usepackage{color,soul} %resaltador
+\usepackage{lipsum}
+\usepackage{booktabs}
+\usepackage{mhchem}
+
+% The fancyhdr package let's us create nice headers.
+\usepackage{fancyhdr}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=nty
+]{biblatex}
+\addbibresource{sample.bib} %Imports bibliography file
+\title{Bibliography management: \texttt{biblatex} package}
+
+\renewcommand{\thesubsection}{} % Remover la numeración de las subsecciones
+\renewcommand{\thesubsubsection}{}
+
+% 3. Header (and Footer)
+\pagestyle{fancy} % With this command we can customize the header style.
+\fancyhf{} % This makes sure we do not have other information in our header or footer.
+\lhead{\footnotesize FCQ-UNA}
+\rhead{\footnotesize Laboratorio de Analisis Industrial - Practica N°4 } 
+\cfoot{\footnotesize \thepage} 
+
+\newcommand{\liney}{-----}
+\newcommand{\gGlu}{\;\text{g Glu}}
+\newcommand{\mL}{\;\text{mL}}
+
+% 4. Your document
+\begin{document}
+
+% Title section of the document
+\thispagestyle{empty} 
+\begin{tabular}{p{15.5cm}}
+{\large \bf Universidad Nacional de Asunción} \\
+Facultad de Ciencias Químicas \\ 
+Ingeniería Química - Laboratorio de Análisis Industrial \\
+\hline
+\end{tabular} 
+
+\vspace*{0.3cm} % Vertical space between the line and title.
+
+\begin{center} 
+    {\Large \bf Practica N°4  \\ \vspace{3mm} Análisis de miel de caña}
+    \vspace{15mm}
+    \begin{figure}[H] 
+	    \centering
+        \includegraphics{LOGO-UNA.jpg}
+    \end{figure}
+\end{center}
+
+\vspace{15mm}
+
+\begin{itemize}
+    \item \textbf{Grupo 11 - Integrantes:}
+    \begin{itemize}
+        \item{\bf Mateo Augusto Acevedo Onieva}
+        \item{\bf Dylan Sebastián Galeano Monteggia}
+        \item{\bf José Manuel Karjallo Zárate}
+        \item{\bf Teresita Asunción Ramirez Cabañas}
+    \end{itemize}
+\end{itemize}
+
+Fecha de realización de la práctica: 21 y 28 de octubre del 2021
+
+
+\newpage
+
+\subsection{Características de la muestra} %(Estado fisico, apariencia) :
+{\bf Muestra}: Miel de caña de azúcar  \\
+{\bf Estado físico}: Líquido denso y viscoso. \\
+{\bf Color}: Marrón café. \\
+{\bf Apariencia}: Ligeramente turbia, translúcida. 
+
+
+
+\section{Determinación del índice de refracción}
+\subsection{Fundamento}
+La determinación del índice de refracción se realiza con el objetivo de tener una medida del contenido de sólidos no azucarados contenidos en la muestra.\\
+
+El índice de refracción mide la refringencia de la luz en el medio, con respecto a la refringencia del vacío. La refringencia puede entenderse como la ``dificultad'' con la que el medio se opone al paso de la luz. Del mismo modo, cuando la luz cambia entre medios con distinto índice de refracción, cambia su trayectoria por un cierto ángulo. Es este ángulo el que se mide con el refractómetro.
+
+% Para su determinación, se utilizó un refractómetro de Abbé. El mismo utiliza leyes de la óptica para devolver digitalmente una lectura del índice de refracción.
+
+
+\subsection{Materiales y reactivos}
+\begin{itemize}
+    \item Refractómetro de Abbé
+\end{itemize}
+
+\subsection{Datos experimentales}
+\begin{itemize}
+    \item Índice de refracción: 1.47329
+    \item Temperatura: 29.65 ºC
+\end{itemize}
+
+% \subsection{Cálculos}
+% No aplica.
+
+\subsection{Resultados obtenidos}
+
+Se obtuvo un índice de refracción de 1.47 para la muestra analizada.
+
+\subsection{Observaciones}
+No se disponen de normas gratuitas sobre miel de caña que referencien un valor de índice de refracción.
+
+% Sin embargo, a continuación se calculan los grados Brix a partir del índice de refracción para su posterior comparación con nor.
+
+% La tabla 1 es una extracto de la tabla de conversión entre grados Brix e índice de refracción. Según la decimosexta sesión de ICUMSA 1974.
+
+% \begin{table}[H]
+% \centering
+% \begin{tabular}{cc}
+% \toprule
+% ºBx & $n$     \\ \midrule
+% 70  & 1.46546 \\
+% 75  & 1.47787 \\
+% 80  & 1.49071 \\ \bottomrule
+% \end{tabular}
+% \caption{Conversión entre grados Brix e índice de refracción}
+% \end{table}
+
+\section{Determinación de reductores}
+\subsection{Fundamento}
+La determinación de azúcares reductores en la muestra se fundamenta en una titulación redox. \\
+
+Como la solución de Fehling posee agentes oxidantes (específicamente, el complejo tartrato de \ce{Cu^2+}), ésta reacciona con los azúcares reductores en la muestra. Estos azúcares poseen carácter débilmente reductor debido a su grupo cetónico libre.
+
+\subsection{Materiales y reactivos}
+\begin{itemize}
+    \item Matraz de 500 mL
+    \item Erlenmeyer
+    \item Bureta
+    \item Glucosa 1\%
+    \item Azul de metileno 1\%
+    \item Solución de Fehling-Cause-Bonnans
+\end{itemize}
+\subsection{Datos experimentales}
+
+\begin{align*}
+ \bullet& \quad \text{Volumen consumido por disolución de Fehling:} && V_f = 9.4   \;\text{mL} \\
+ \bullet& \quad \text{Volumen consumido por muestra:}               && V_m = 5.5   \;\text{mL} \\
+ \bullet& \quad \text{Masa de muestra:}                             && m   = 10.05 \;\text{g}
+\end{align*}
+
+% Características de la muestra
+% Reacción
+% Pesadas
+% Volúmenes
+% Cálculos
+
+\subsection{Cálculos}
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccc}
+        1g Glu & \liney & 100 mL Fehling \\
+        A      & \liney & $V_f$
+    \end{tabular}
+\end{table}
+
+\[ A = V_f \;\frac{1 \gGlu}{100 \mL} = \frac{9.4 \mL \times 1 \gGlu}{100 \mL} = 0.094 \gGlu\]
+
+\newpage
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccc}
+        A & \liney & $V_m$ \\
+        B      & \liney & 100 mL
+    \end{tabular}
+\end{table}
+
+\[ B = A\;\frac{100\mL}{V_m} = \frac{0.094\gGlu \times 100\mL}{5.5\mL} = 1.7\overline{09} \gGlu \]
+
+% El contenido de azúcares reductores en la muestra es entonces:
+
+\[ \frac{B}{m} = \frac{1.7\overline{09} \gGLu}{10.05\;\text{g}} = 17.015 \;\% \] %\quad\text{reductores} \]
+
+
+\subsection{Resultados obtenidos}
+Se obtuvo un contenido de 17\% de azúcares reductores.
+
+\subsection{Observaciones}
+La norma FT-AC-62 referencia un valor mínimo de 48\% de reductores.
+
+La norma INEN 261 referencia un valor de reductores entre 46\% y 59\%.
+
+Se estima que el valor medido se halla muy por debajo de los valores referencia debido a imprecisiones cometidas durante las titulaciones. En especial, se presentaron dificultades para mantener la mezcla de titulación a una temperatura consistentemente alta.
+
+\section{Determinación de sacarosa}
+\subsection{Fundamento}
+La determinación del contenido de sacarosa de la muestra se fundamenta en la polarimetría. \\
+
+Ambos la sacarosa y la glucosa son dextrógiros. La fructosa es levógira. Cuando se hidroliza la sacarosa con ácidos, forma en partes iguales glucosa y fructosa. En esta mezcla en partes iguales, debido a que la rotación específica de la fructosa es mayor en valor absoluto a la de la glucosa, el carácter levógiro predomina. \\
+
+Es este cambio de dextrórrotación a levorrotación el que se aprovecha para determinar el contenido de sacarosa en la muestra.
+% Por polarimetría
+\newpage
+\subsection{Materiales y reactivos}
+\begin{itemize}
+    \item Polarímetro
+    \item Tubos de polarímetro
+    \item Matraz de 100 mL
+    \item Oxalato de potasio
+    \item Fosfato de sodio
+    \item Subacetato de potasio
+    \item Ácido clorhídrico
+\end{itemize}
+\subsection{Datos experimentales}
+
+\begin{itemize}
+    \item Desviación levógira: -82.95º
+\end{itemize}
+
+% \subsubsection{Reacciones}
+% Precipitación (de la miel?)\\
+% Eliminación del exceso de plomo con oxalato y fosfato\\
+% Hidrólisis de la sacarosa
+
+\subsection{Cálculos}
+No aplica.
+\subsection{Resultados obtenidos}
+La lectura dextrógira no se pudo realizar debido a turbiedad en la muestra. Esto se adjudica a una defecación insuficiente de la muestra.
+
+Debido a que no se posee el dato de la desviación dextrógira no es posible calcular el contenido de sacarosa de la muestra.
+% \subsection{Observaciones}
+
+\section{Determinación de la humedad}
+\subsection{Fundamento}
+La humedad se determina mediante desecación con termobalanza. La misma posee un emisor de rayos infrarrojos que proporcionan el calor necesario para desecar la muestra.
+\subsection{Materiales y reactivos}
+\begin{itemize}
+    \item Termobalanza
+\end{itemize}
+\subsection{Datos experimentales}
+\begin{itemize}
+    \item Masa de muestra: 2.040 g
+    \item Contenido de humedad: 49.289 \%
+    \item Tiempo de desecado: 3h 21min 32s
+    \item Temperatura de desecado: 149 ºC
+    
+\end{itemize}
+% Características de la muestra
+% Reacción
+% Pesadas
+% Volúmenes
+% Cálculos
+% \subsection{Cálculos}
+\subsection{Resultados obtenidos}
+Se obtuvo un contenido de humedad del 49.29 \% en masa para la muestra analizada.
+\subsection{Observaciones}
+% No se disponen de normas gratuitas sobre miel de caña que referencien un valor de contenido de humedad.
+La norma ecuatoriana INEN 261 sobre melazas referencia un valor máximo de 26.5\%. Se estima que la gran diferencia entre el valor medido y el máximo esperado se debe a anomalías en el tiempo de funcionamiento de la termobalanza. 
+
+\section{Determinación del rendimiento alcohólico}
+No se realizó debido a falta de equipos de destilación.
+
+\section{Conclusión}
+
+En esta práctica se realizaron a diversos grados de éxito distintas determinaciones importantes en el análisis de calidad de la miel de caña de azúcar. \\
+
+Los resultados obtenidos tienen valor más bien pedagógico, puesto que debido a situaciones externas no fue posible realizar todas las determinaciones, o concluir algunas de las mismas. \\
+
+De este modo, se evidencia la importancia del cuidado y atención al detalle a la hora de realizar determinaciones cuantitativas en el laboratorio, así como la relevancia profesional que poseen las normas tanto nacionales como internacionales en el proceso de control de la calidad de los productos tales como la miel de caña.
+
+\section{Bibliografía}
+\begin{itemize}
+    \item NTE INEN 0261: MELAZAS. REQUISITOS
+    \item FT-AC-62: 2017. FICHA TECNICA MELAZA
+\end{itemize}
+
+
+\end{document}
+
+Bibliografías
+- Norma ecuatoriana sobre melazas INEN 261
+- Interpolación de grados brix ICUMSA 1974
+- Melaza de caña FT-AC-62
